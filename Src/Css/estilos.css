@@ -1,0 +1,168 @@
+/*ANOTAÇÕES*/
+/* ver o inspecionar elemento*/
+
+body {
+    font-family: 'Poppins';  /*Integração da font baixada do google*/
+}
+
+.cabecalho {
+    background-color:   ;   /*  ajuda para visualizar coisas no site */ 
+    display: flex; /* **importante**/
+    justify-content: space-between; /* ***espaço entre os elementos***/
+    padding: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Aqui vamos mexer no logo do cabeçalho*/
+.cabecalho .logo {      
+     width: 65px;     /* *largura*/
+}
+
+.cabecalho .menu {
+     background-color: ;
+     display: flex; 
+     align-items: center; /* *****alinhar itens ******/ 
+     /* *precisamos de espça para alinhamento, espaço de largura e altura****/
+     height: 100%;  /* *** altura ******/
+ }
+
+
+.cabecalho nav li a {
+    background-color: ;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 25px;
+    padding: 10px 20px;  /*espaçamento do conteúdo***/
+    border-radius: 50px;
+    transition: 0.2s;
+}
+
+/* *****efeito de passar o mouse***/
+.cabecalho nav li a:hover {    /* *****houver sig. passar por cima ******/ 
+    background-color: red ; /* usar na hora de visualizar gride de trabalho*/
+} 
+
+.container {
+    background-color:  ;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 132px); 
+    /* autura da tela da pessoa 100vh - altura do menu*/
+    padding: 0 30px 30px; /*olhar caixinha do inspecionar**/
+}
+
+.container .imagem-titulo {
+    max-width: 500px;  /* *largura da imagem****/
+}   
+
+.container .descricao {
+    color: #a8adb7;
+    width: 85%;
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+.container .botao-trailer {
+    background-color:  #ff0021;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer; 
+    border: none;
+    text-transform: uppercase;
+    transition: 0.5s all ease-out;
+}
+
+/* *************************/
+.container .botao-trailer:hover {
+    transform: scale(1.1);
+}
+
+.fundo-video {
+    background-color:  #ff0021;
+    position: absolute;
+    z-index: -1;  /* *posicionar elemento no eixo Z de profundidade***/
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;  /* *transbordar altura e largura hidden esconde ***/
+
+    /* Se tiver tela maior ajusta o video ao centro*/
+    display: flex; 
+    justify-content: center;
+}
+
+.fundo-video .video {
+    height: 150vh;
+}
+
+/* ***OPACIDADE VER ATRAVES DAS COISAS****
+ https://cssgradient.io/ site para pegar codígo 
+ Parte escura em frente ao video
+ */
+
+.fundo-video::after {
+    content: "";
+    background-color: #d5011d;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+ 
+    /* TIREMOS ESSE COD DO SITE DE GRADIENTE*/
+    background: rgb(1,1,11);
+    background: linear-gradient(90deg, rgba(1,1,11,1) 12%, rgba(0,0,0,0.5354516806722689) 50%, rgba(0,0,0,1) 85%);     
+}
+
+/* * AQUI É MODAL DO VIDEO  ***/
+
+
+   .modal {
+    background-color: ;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;   
+    top: 0;
+    left: 0;
+    background-color: rgba(52, 52, 50, 0.749); 
+    visibility: hidden; /* aqui deixa invisivel ( hidden )*/
+    }
+
+      .conteudo-modal {
+        background-color:;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        border: radius 5px; 
+        gap: 15px;
+      }
+
+      .fechar-modal {
+        background-color: #ffffff;
+        color: #f03a17;
+        font-weight: bold;
+        font-size: 20px;
+        width: 40px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      .modal iframe {
+        border-width: 0;
+        width: 640px;
+        height: 360px;
+      }
+
+     .modal.aberto {
+        opacity: 1;
+        visibility: visible;
+      }
+
+

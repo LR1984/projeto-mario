@@ -1,0 +1,18 @@
+   /* criar um link de conecção do html com CSS*/
+   /*TEM RESET PRONTO NA INTERNET*/
+
+* { 
+  margin: 0;        /* criar um link de conecção do html com CSS*/
+  padding: 0;
+  box-sizing: border-box; /*facilita os espaçamento dos elements*/
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;  
+}
